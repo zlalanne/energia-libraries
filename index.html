@@ -10,26 +10,48 @@
     <link href="app/css/app.css" rel="stylesheet">
 
     <script src="bower_components/angularjs/angular.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/angular-lodash/angular-lodash.js"></script>
     <script src="app/js/app.js"></script>
     <script src="app/js/controllers.js"></script>
   </head>
   <body>
-    <div>
-      <ul ng-controller="CategoryController as categoryCtrl">
-        <li ng-repeat="category in categories">
-          {{category.name}}
+    <div ng-controller="FilterController as filterCtrl">
+      <h4>Categories</h4>
+      <ul class="nav nav-pills" ng-controller="CategoryController as categoryCtrl">
+        <li ng-repeat="category in categories" ng-class="{ active: filterCtrl.isCategoryActive(category.name) }">
+          <a href ng-click="filterCtrl.toggleCategory(category.name)">{{category.name}}</a>
         </li>
       </ul>
-      <ul ng-controller="BoardController as boardCtrl">
-        <li ng-repeat="board in boards">
-          {{board.name}}
+      <h4>Boards</h4>
+      <ul class="nav nav-pills" ng-controller="BoardController as boardCtrl">
+        <li ng-repeat="board in boards" ng-class="{ active: filterCtrl.isBoardActive(board.name) }">
+          <a href ng-click="filterCtrl.toggleBoard(board.name)">{{board.name}}</a>
         </li>
       </ul>
       <ul ng-controller="LibraryController as libraryCtrl">
-        <li ng-repeat="library in libraries">
-          {{library.name}}
-        </li>
+        <table class="table table-striped table-hover table-condensed">
+          <thead>
+            <tr>
+              <th>Library Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="library in libraries">
+              <td>{{library.name}}</td>
+              <td>{{library.description}}</td>
+            </tr>
+        </table>
       </ul>
+      <h5>Category Filters:</h5>
+      <ul>
+        <li ng-repeat="filter in categoryFilters">{{filter}}</li>
+      </ul>
+      <h5>Board Filters:</h5>
+      <ul>
+        <li ng-repeat="filter in boardFilters">{{filter}}</li>
+      <ul>
     </div>
   </body>
 </html>

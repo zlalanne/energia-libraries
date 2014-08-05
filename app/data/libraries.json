@@ -2,6 +2,7 @@
 	"libraries": [
 		{
 			"name": "RedBot BoosterPack",
+			"description": "Learn robotics with the RedBot",
 			"categories": [
 				{
 					"name": "Robotics"
@@ -16,6 +17,7 @@
 		},
 		{
 			"name": "xively_energia",
+			"description": "Communicate with Xively IoT Solutions",
 			"categories": [
 				{
 					"name": "Web"
@@ -30,6 +32,7 @@
 		},
 		{
 			"name": "HttpClient",
+			"description": "Perform HTTP requests",
 			"categories": [
 				{
 					"name": "Web"
