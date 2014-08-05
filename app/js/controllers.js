@@ -43,5 +43,22 @@
 			return _.indexOf($scope.boardFilters, data) !== -1;
 		};
 
+		this.filterResults = function(library) {
+
+			// Add library to result list if no filters selected
+			if($scope.categoryFilters.length === 0 && $scope.boardFilters.length === 0) {
+				return true;
+			}
+
+			if(_.intersection(library.categories, $scope.categoryFilters).length > 0) {
+				return true;
+			} else {
+				if(_.intersection(library.workingBoards, $scope.boardFilters).length > 0) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		};
 	});
 })();

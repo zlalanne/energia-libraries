@@ -4,45 +4,30 @@
 			"name": "RedBot BoosterPack",
 			"description": "Learn robotics with the RedBot",
 			"categories": [
-				{
-					"name": "Robotics"
-				}
+				"Robotics"
 			],
-			"boards": [
-				{
-					"name": "MSP-EXP430F5529LP",
-					"status": "Tested"
-				}
+			"workingBoards": [
+				"MSP-EXP430F5529LP"
 			]
 		},
 		{
 			"name": "xively_energia",
 			"description": "Communicate with Xively IoT Solutions",
 			"categories": [
-				{
-					"name": "Web"
-				}
+				"Web"
 			],
-			"boards": [
-				{
-					"name": "MSP-EXP430F5529LP",
-					"status": "Tested"
-				}
+			"workingBoards": [
+				"MSP-EXP430F5529LP"
 			]
 		},
 		{
 			"name": "HttpClient",
 			"description": "Perform HTTP requests",
 			"categories": [
-				{
-					"name": "Web"
-				}
+				"Web"
 			],
-			"boards": [
-				{
-					"name": "MSP-EXP430F5529LP",
-					"status": "Not Working"
-				}
+			"workingBoards": [
+				"MSP-EXP430F5529LP"
 			]
 		}
 	]

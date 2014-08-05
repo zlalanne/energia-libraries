@@ -38,20 +38,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="library in libraries">
+            <tr ng-repeat="library in libraries | filter:filterCtrl.filterResults:false">
               <td>{{library.name}}</td>
               <td>{{library.description}}</td>
             </tr>
         </table>
       </ul>
-      <h5>Category Filters:</h5>
-      <ul>
-        <li ng-repeat="filter in categoryFilters">{{filter}}</li>
-      </ul>
-      <h5>Board Filters:</h5>
-      <ul>
-        <li ng-repeat="filter in boardFilters">{{filter}}</li>
-      <ul>
     </div>
   </body>
 </html>
