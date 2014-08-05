@@ -12,8 +12,24 @@
     <script src="bower_components/angularjs/angular.js"></script>
     <script src="app/js/app.js"></script>
     <script src="app/js/controllers.js"></script>
-
   </head>
   <body>
+    <div>
+      <ul ng-controller="CategoryController as categoryCtrl">
+        <li ng-repeat="category in categories">
+          {{category.name}}
+        </li>
+      </ul>
+      <ul ng-controller="BoardController as boardCtrl">
+        <li ng-repeat="board in boards">
+          {{board.name}}
+        </li>
+      </ul>
+      <ul ng-controller="LibraryController as libraryCtrl">
+        <li ng-repeat="library in libraries">
+          {{library.name}}
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

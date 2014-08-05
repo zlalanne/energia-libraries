@@ -1,0 +1,46 @@
+{
+	"libraries": [
+		{
+			"name": "RedBot BoosterPack",
+			"categories": [
+				{
+					"name": "Robotics"
+				}
+			],
+			"boards": [
+				{
+					"name": "MSP-EXP430F5529LP",
+					"status": "Tested"
+				}
+			]
+		},
+		{
+			"name": "xively_energia",
+			"categories": [
+				{
+					"name": "Web"
+				}
+			],
+			"boards": [
+				{
+					"name": "MSP-EXP430F5529LP",
+					"status": "Tested"
+				}
+			]
+		},
+		{
+			"name": "HttpClient",
+			"categories": [
+				{
+					"name": "Web"
+				}
+			],
+			"boards": [
+				{
+					"name": "MSP-EXP430F5529LP",
+					"status": "Not Working"
+				}
+			]
+		}
+	]
+}

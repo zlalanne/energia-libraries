@@ -1,0 +1,25 @@
+{
+	"categories": [
+		{
+			"name": "Web"
+		},
+		{
+			"name": "Robotics"
+		},
+		{
+			"name": "Battery"
+		},
+		{
+			"name": "Display"
+		},
+		{
+			"name": "Storage"
+		},
+		{
+			"name": "Sensors"
+		},
+		{
+			"name": "Communication"
+		}
+	]
+}
