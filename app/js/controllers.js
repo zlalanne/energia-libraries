@@ -22,6 +22,30 @@
           });
     }]);
 
+    libraryApp.controller('DisplayController', ['$scope', function($scope) {
+
+        var showLibraries = function() {
+            if($scope.search.query !== "") {
+                return true;
+            } else if($scope.categoryFilters.length !== 0) {
+                return true;
+            } else if($scope.boardFilters.length !== 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        this.showLibraries = function() {
+            return showLibraries();
+        };
+
+        this.showInfo = function() {
+            return !showLibraries();
+        };
+        
+    }]);
+
     libraryApp.controller('FilterController', ['$scope', function($scope) {
         
         $scope.categoryFilters = [];
