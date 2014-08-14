@@ -8,12 +8,12 @@
   <h4>Categories</h4>
   <ul class="nav nav-pills" ng-controller="CategoryController as categoryCtrl">
     <li ng-repeat="category in categories" ng-class="{ active: filterCtrl.isCategoryActive(category.name) }">
-      <a href ng-click="filterCtrl.toggleCategory(category.name)">{{category.name}}</a>
+      <a href ng-click="filterCtrl.toggleCategory(category.name)" class="filter">{{category.name}}</a>
     </li>
   </ul>
   <h4>Boards</h4>
   <ul class="nav nav-pills" ng-controller="BoardController as boardCtrl">
-    <li ng-repeat="board in boards" ng-class="{ active: filterCtrl.isBoardActive(board.name) }">
+    <li ng-repeat="board in boards" ng-class="{ active: filterCtrl.isBoardActive(board.name) }" class="filter">
       <a href ng-click="filterCtrl.toggleBoard(board.name)">{{board.name}}</a>
     </li>
   </ul>
