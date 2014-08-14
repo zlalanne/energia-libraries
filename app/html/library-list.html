@@ -1,0 +1,36 @@
+<div ng-controller="FilterController as filterCtrl">
+  <h4>Search</h4>
+  <form role="form">
+    <div class="form-group">
+      <label for="filter">Search:</label>
+      <input type="text" class="form-control" id="filter" placeholder="Search for a library" ng-model="search" ng-init="search = ''">
+    </div>
+  </form>
+  <h4>Categories</h4>
+  <ul class="nav nav-pills" ng-controller="CategoryController as categoryCtrl">
+    <li ng-repeat="category in categories" ng-class="{ active: filterCtrl.isCategoryActive(category.name) }">
+      <a href ng-click="filterCtrl.toggleCategory(category.name)">{{category.name}}</a>
+    </li>
+  </ul>
+  <h4>Boards</h4>
+  <ul class="nav nav-pills" ng-controller="BoardController as boardCtrl">
+    <li ng-repeat="board in boards" ng-class="{ active: filterCtrl.isBoardActive(board.name) }">
+      <a href ng-click="filterCtrl.toggleBoard(board.name)">{{board.name}}</a>
+    </li>
+  </ul>
+  <ul ng-controller="LibraryController as libraryCtrl">
+    <table class="table table-striped table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>Library Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="library in libraries | filter:search | filter:filterCtrl.filterResults">
+          <td>{{library.name}}</td>
+          <td>{{library.description}}</td>
+        </tr>
+    </table>
+  </ul>
+</div>
